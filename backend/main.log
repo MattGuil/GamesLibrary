@@ -4,13 +4,9 @@
  * Running on all addresses (0.0.0.0)
    WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
- * Running on http://193.70.88.130:5000 (Press CTRL+C to quit)
+ * Running on http://192.168.0.150:5000 (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 124-233-076
-82.142.3.124 - - [24/Apr/2022 22:46:13] "GET /games HTTP/1.1" 200 -
-127.0.0.1 - - [24/Apr/2022 22:46:39] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [24/Apr/2022 22:46:49] "[33mGET /toto HTTP/1.1[0m" 404 -
-127.0.0.1 - - [24/Apr/2022 22:47:01] "GET /games HTTP/1.1" 200 -
-127.0.0.1 - - [24/Apr/2022 22:47:37] "GET /games HTTP/1.1" 200 -
-127.0.0.1 - - [24/Apr/2022 22:47:57] "GET /games HTTP/1.1" 200 -
+ * Debugger PIN: 145-255-598
+127.0.0.1 - - [24/Apr/2022 23:21:32] "GET /games HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2022 23:22:15] "GET /games HTTP/1.1" 200 -
