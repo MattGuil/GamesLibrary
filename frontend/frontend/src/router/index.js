@@ -1,16 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Shark from '../components/Shark.vue'
-import Games from '../components/Games.vue'
+import Games from '../views/Games.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path : '/shark',
-    name : 'Shark',
-    component : Shark,
-  },
   {
     path : '/games',
     name : 'Games',
