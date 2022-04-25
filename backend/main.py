@@ -12,11 +12,7 @@ CORS(app, resources={r"/*":{'origins':"*"}})
 # hello world route
 @app.route('/', methods=['GET'])
 def greetings():
-    return("Hello World!")
-
-@app.route('/shark', methods=['GET'])
-def shark():
-    return("Shark!")
+    return("go /games")
 
 GAMES = [
     {
