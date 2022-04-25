@@ -47,7 +47,7 @@
                                     <button type="button" class="btn btn-info btn-sm" v-b-modal.game-update-modal @click="editGame(game)">
                                         Update
                                     </button>
-                                    <button type="button" class="btn btn-danger btn-sm">
+                                    <button type="button" class="btn btn-danger btn-sm" @click="deleteGame(game)">
                                         Delete
                                     </button>
                                 </div>
@@ -55,7 +55,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <footer class="bg-primary text-white text-center">
+                <footer class="bg-primary text-white text-center" style="padding: 10px;">
                     Copyright &copy;. All Rights Reserved 2022.
                 </footer>
             </div>
@@ -271,6 +271,7 @@ export default {
             this.getGames();
         },
 
+        // Update Individual Game
         updateGame(payload, gameID) {
             const path = `http://localhost:5000/games/${gameID}`;
             axios.put(path, payload)
@@ -285,9 +286,28 @@ export default {
             });
         },
 
+        // Delete Individual Game
+        removeGame(gameID) {
+            const path = `http://localhost:5000/games/${gameID}`
+            axios.delete(path)
+            .then(() => {
+                this.getGames();
+                this.message = "Game Removed!";
+                this.showMessage = true;
+            })
+            .catch((err) => {
+                console.error(err);
+                this.getGames();
+            });
+        },
+
         // Handle update button
         editGame(game) {
             this.editForm = game;
+        },
+        // Handle delete button
+        deleteGame(game) {
+            this.removeGame(game.id);
         }
     },
     created() {
