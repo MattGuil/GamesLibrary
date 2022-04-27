@@ -4,7 +4,17 @@
  * Running on all addresses (0.0.0.0)
    WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.18:5000 (Press CTRL+C to quit)
+
+ * Running on http://193.70.88.130:5000 (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 145-255-598
+ * Debugger PIN: 618-151-141
+132.168.4.194 - - [25/Apr/2022 12:45:37] "GET / HTTP/1.1" 200 -
+132.168.4.194 - - [25/Apr/2022 12:45:38] "GET / HTTP/1.1" 200 -
+132.168.4.194 - - [25/Apr/2022 12:45:43] "[33mGET /games/ HTTP/1.1[0m" 404 -
+132.168.4.194 - - [25/Apr/2022 12:45:47] "GET /games HTTP/1.1" 200 -
+132.168.4.194 - - [25/Apr/2022 14:01:11] "GET /games HTTP/1.1" 200 -
+137.184.89.250 - - [25/Apr/2022 16:15:09] "[31m[1mPOST / HTTP/1.0[0m" 405 -
+90.112.23.53 - - [25/Apr/2022 17:09:20] "GET / HTTP/1.1" 200 -
+90.112.23.53 - - [25/Apr/2022 17:09:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+90.112.23.53 - - [25/Apr/2022 17:09:29] "GET /games HTTP/1.1" 200 -
