@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="game, index in games" :key="index">
+                <tr v-for="game, index in games" :key="index" :id="game.title">
                     <td>{{ game.title }}</td>
                     <td>{{ game.genre }}</td>
                     <td>
@@ -24,10 +24,10 @@
                     </td>
                     <td>
                         <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-info btn-sm" v-b-modal.game-update-modal @click="editGame(game)">
+                            <button :id="game.title" type="button" class="btn btn-info btn-sm" v-b-modal.game-update-modal @click="editGame(game)">
                                 Update
                             </button>
-                            <button type="button" class="btn btn-danger btn-sm" @click="deleteGame(game)">
+                            <button :id="game.title" type="button" class="btn btn-danger btn-sm" @click="deleteGame(game)">
                                 Delete
                             </button>
                         </div>
@@ -80,7 +80,7 @@
                 </b-form-group>
 
                 <!-- buttons : submit and reset -->
-                <b-button type="submit" variant="outline-info">Submit</b-button>
+                <b-button id="btnSubmit" type="submit" variant="outline-info">Submit</b-button>
                 <b-button type="reset" variant="outline-danger">Reset</b-button>
 
             </b-form>
@@ -99,7 +99,7 @@
                 <b-form-group id="form-title-edit-group"
                                 label="Title:"
                                 label-for="form-title-edit-input">
-                    <b-form-input id="form-title-input"
+                    <b-form-input id="form-title-edit-input"
                                     type="text"
                                     v-model="editForm.title"
                                     required
@@ -131,7 +131,7 @@
                 </b-form-group>
 
                 <!-- buttons : submit and reset -->
-                <b-button type="submit" variant="outline-info">Update</b-button>
+                <b-button id="btnUpdate" type="submit" variant="outline-info">Update</b-button>
                 <b-button type="reset" variant="outline-danger">Cancel</b-button>
 
             </b-form>
